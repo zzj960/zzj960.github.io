@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[post1]]></title>
-    <url>%2F2019%2F05%2F15%2Fpost1%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[post]]></title>
-    <url>%2F2019%2F05%2F15%2Fpost%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[post]]></title>
-    <url>%2F2019%2F05%2F15%2Fpost%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <title><![CDATA[markdowm空格缩进、多层嵌套]]></title>
+    <url>%2F2019%2F05%2F17%2Fmarkdowm%E7%A9%BA%E6%A0%BC%E7%BC%A9%E8%BF%9B%2F</url>
+    <content type="text"><![CDATA[空格缩进 一个空格表示：&amp;ensp;或&amp;#8194; 两个空格表示：&amp;emsp;或&amp;#8195; 不换行空格：&amp;nbsp;或&amp;#160; 多层嵌套效果： 第一层 第二层 &amp;alpha; &amp;acute; 代码：12345&gt; 第一层&gt;&gt; 第二层&gt;&gt; &gt;&gt; &amp;alpha;&gt;&gt; &amp;acute;]]></content>
+      <tags>
+        <tag>markdowm书写方法</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F05%2F14%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. fsfsaQuick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
