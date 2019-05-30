@@ -534,7 +534,9 @@
       
 
       
-        <p>软件从未变得如此重要。当年赴摩尔学院听计算机讲座的先驱们万万没有想到，他们所学的知识竟然催生了一个新的行业，一个由计算机指令支撑起来的虚拟行业。软件分为多个层次，涉及到微代码、机器代码、汇编语言、高级语言的转换。数据库、软件开发过程，乃至整个企业结构都与之息息相关。计算机无所不在，它们的思想统领着整个世界。软件的重要性已变得无以复加，无怪乎世界上财力最雄厚的富豪当中，有好几个人是靠经营软件公司而积累了大笔的财富。<br> “优化软件就相当于优化一切。”<br><a id="more"></a></p>
+        <p>软件从未变得如此重要。当年赴摩尔学院听计算机讲座的先驱们万万没有想到，他们所学的知识竟然催生了一个新的行业，一个由计算机指令支撑起来的虚拟行业。软件分为多个层次，涉及到微代码、机器代码、汇编语言、高级语言的转换。数据库、软件开发过程，乃至整个企业结构都与之息息相关。计算机无所不在，它们的思想统领着整个世界。软件的重要性已变得无以复加，无怪乎世界上财力最雄厚的富豪当中，有好几个人是靠经营软件公司而积累了大笔的财富。<br> “优化软件就相当于优化一切。”</p>
+<a id="more"></a>
+
 <h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>随着编程语言的功能日渐强大，计算机的速度日益加快，容量日益扩大，可靠性日益增强。很快，计算机科学家就意识到，除了计算方程式的结果，计算机还可以在更广阔的领域大有可为。它们可以快速存储和处理大量的数据。<br>如果只是单纯存储一系列数字，那倒不是什么难事，但是，如果存储的是病历记录或者财会记录，那么情况就会复杂许多。这就要求计算机必须能在短时间内迅速找到特定的信息条目——比如某一份病例中记述的病因，或者某一天产生的支付记录。怎样编排数据才能帮助我们轻松地找到所需信息呢？<br>这些都不是什么新的问题——自从第一部词典问世以来，人们就面临着快速查找词条的问题。其解决办法，就是按照字母表的顺序编排词语。以某个单词为参照，词典中的其他词语中要么在它之前，要么在它之后。因此，我们在查找单词时，可以翻开词典的任何一页，然后根据上面的词语决定应该往前翻还是往后翻，直到将我们想查的单词查找出来。</p>
 <h3 id="第一代"><a href="#第一代" class="headerlink" title="第一代"></a>第一代</h3><p>第一代数据库都是按照非常类似的原则编排的，它们于20世纪60年代问世，被称为导航式数据库管理系统（navigational database management system）。数据库第一次打开时，就会自动出现一个指针，指向第一条存储记录（好比翻开词典正文的第一页，就会看到第一个词条是以a开头的单词）。这些存储记录按照链表或网状结构编排，每一条记录当中都存有一个指针，指向相邻的记录。为了检索信息，计算机需要访问每一条记录，并通过其中的链接跳转到下一个记录，以此类推，直到找到用户所需的信息。如果用户想从一个庞大的数据库中检索出所有心脏病患者的病例，那么计算机就需要把每一条记录都访问一遍，才能将心脏病患者的病例筛选出来。这显然是一个非常缓慢而低效的信息检索方式，而且在那个年代，计算机和存储设备的运转速度都慢得可怜，要执行这样的检索是难以想象的。或许这种事情在今天的人看来有些匪夷所思，不过第一代数据库的确是不能用来查找信息。<br>随着计算机和存储器的性能日渐提升，导航式数据库的局限性也愈发凸显。20世纪70年代，IBM的一名英国研究人员埃德加·弗兰克·科德（Edgar Frank “Ted” Codd）认为，数据库的模型亟待改进。科德与开发硬盘存储系统的IBM员工一道，设计了一个新的数据库模型，科德称之为关系模型。这种数据库结构比较智能化。数据的编排方式并不是像词典那样列出一长串条目，而是采用一系列数据库表，不同的数据库表通过关系键联系起来。<br>为了便于大家理解关系数据库，我们用词典来打个比方。关系数据库就好比一系列分类词典，比如动词词典、名词词典、副词词典等等。如果你想查找某个单词——比如动词“bow”，那就只需要翻阅动词词典。如果你想找“bow”的名词词义，那就只需要翻阅名词词典。这比从头到尾地翻阅一本超厚的大词典要高效多了。<br>关系数据库也是同样的道理，它采用关系键，将不同的记录联系起来。比方说，一个员工信息数据库可能会以员工编号作为关系键。知道了工号，你就可以在各个数据库表（好比各个分类词典）中分别查询员工的工资信息、家庭住址、计算机登录情况等等。每个数据库表中的值都可以作为关系键，用于在其他数据库表中查找相应的信息。也就是说，员工的职位描述也可作为关系键，用来查询员工是否具备参与机密工作的资格。</p>
 <h3 id="SEQUEL的出现"><a href="#SEQUEL的出现" class="headerlink" title="SEQUEL的出现"></a>SEQUEL的出现</h3><p>20世纪70年代末出现了一种特殊的编程语言，用户可以通过它查询数据库中的复杂信息。这种语言脱胎于关系代数和微积分，全称为结构化英语查询语言（SEQUEL，即Structured English Query Language），后来又很快简称为结构化查询语言（SQL）。SQL支持查询、表达式、从句等多种编程元素。有了它，用户就可以在数据库中查询高度复杂的信息。<br>数据库管理系统负责接收和翻译SQL表达式，并尽快返回结果（如果情况理想的话）。SQL中包含好几种语言，其中数据操纵语言（data manipulation language，简称DML）和数据定义语言（data definition language，简称DDL）能让用户运用简单易用的表达式在数据库中修改或添加数据。<br>此后，数据库在原有的基础上继续改进，开始向面向对象的趋势发展，并进一步得到优化。索引的概念得到引进，经常查询的信息存储在高速的临时数据库中，临时数据库则与主数据库相连。正如图书目录一样，索引可以使用户查找所需信息的速度大幅加快。如今，数据库的设计特点表现为高度模块化，可访问性强。可扩展标记语言（Extensible Markup Language，简称XML）、超级文本预处理语言（Hypertext Preprocessor，简称PHP）等基于网页的语言可以使用SQL，连接在线数据库。（有了网页服务器，当你浏览的网页中包含这些高级语言写成的命令时，网页浏览器就会对它们进行翻译。）可以想见，未来数据库的分布将日趋广泛，可访问性日益增强，访问速度日益加快。</p>
@@ -1063,7 +1065,7 @@
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: false,
+    visitor: true,
     lang: '' || 'zh-cn'
   });
 </script>
@@ -1400,64 +1402,6 @@
 
 
   
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-            
-              .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-              })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz',
-                'X-LC-Key': 'lmvjSqdLOJydVwsV7eVUhWVG',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            addCount(Counter);
-          
-        });
-    });
-  </script>
-
-
 
   
 
