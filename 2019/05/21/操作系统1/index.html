@@ -140,7 +140,7 @@
 <meta property="og:image" content="http://zzj960.github.io/2019/05/21/操作系统1/827651-20180110183621582-153745188.png">
 <meta property="og:image" content="http://zzj960.github.io/2019/05/21/操作系统1/827651-20180110183714426-287499114.png">
 <meta property="og:image" content="http://zzj960.github.io/2019/05/21/操作系统1/20180517102615302">
-<meta property="og:updated_time" content="2019-05-29T09:19:42.955Z">
+<meta property="og:updated_time" content="2019-06-02T12:09:47.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统初期发展">
 <meta name="twitter:description" content="无操作系统的计算机系统:人工操作方式：用户采用人工操作方式直接使用计算机硬件系统，将已经穿孔的纸带装入纸带输入机，在启动它将程序和数据输入计算机，然后计算机运行。">
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-29 17:19:42" itemprop="dateModified" datetime="2019-05-29T17:19:42+08:00">2019-05-29</time>
+                <time title="修改时间：2019-06-02 20:09:47" itemprop="dateModified" datetime="2019-06-02T20:09:47+08:00">2019-06-02</time>
               
             
           </span>
@@ -592,20 +592,20 @@
 <h2 id="实时操作系统的起源"><a href="#实时操作系统的起源" class="headerlink" title="实时操作系统的起源"></a>实时操作系统的起源</h2><p>为了提高单一操作员单一控制终端的操作系统SOSC的效率，人们提出了批处理操作系统。SOSC效率低下是因为计算机总是在等待人的下一步动作，而人的动作总是很慢。因此，人们觉得，如果去掉等待人的时间，即让所有的人先想好自己要运行的命令，列成一个清单，打印在纸带上，然后交给一个工作人员来一批一批的处理，效率不就提高了吗？这样就形成了批处理操作系统。</p>
 <h2 id="批处理系统的定义"><a href="#批处理系统的定义" class="headerlink" title="批处理系统的定义"></a>批处理系统的定义</h2><p>批处理系统就是成批处理一些程序的系统。批处理分为联机批处理和脱机批处理两种。</p>
 </blockquote>
-<h2 id="联机批处理："><a href="#联机批处理：" class="headerlink" title="联机批处理："></a>联机批处理：</h2><p>在联机批处理中，编制了一个常驻内存的监督程序，用来控制用户作业的运行。其处理过程为：用户将所需解决的问题组成作业，交给操作员，操作员有选择地把若干作业合成一批，并把一批作业装到输入设备上，然后由监督程序控制送到辅存，再从辅村中将一个一个作业调入内存运行，直到全部作业处理完毕。</p>
-<h2 id="脱机批处理："><a href="#脱机批处理：" class="headerlink" title="脱机批处理："></a>脱机批处理：</h2><p>脱机批处理系统由主机和卫星机组成。卫星机又称外围计算机，它不与主机直接连接，只与外部设备打交道。作业通过卫星机输入到磁带上，当主机需要输入作业时，就把输入带从卫星机的磁带机上取下，并装入到主机的磁带机上。于是，主机可以连续的处理由输入带输入的许多用户作业，并把这些作业的运行结果不断地输出到输出带上。最后，多个用户作业的输出结果再通过卫星机连接的打印机打印出来。</p>
+<h2 id="联机批处理"><a href="#联机批处理" class="headerlink" title="联机批处理"></a>联机批处理</h2><p>在联机批处理中，编制了一个常驻内存的监督程序，用来控制用户作业的运行。其处理过程为：用户将所需解决的问题组成作业，交给操作员，操作员有选择地把若干作业合成一批，并把一批作业装到输入设备上，然后由监督程序控制送到辅存，再从辅村中将一个一个作业调入内存运行，直到全部作业处理完毕。</p>
+<h2 id="脱机批处理"><a href="#脱机批处理" class="headerlink" title="脱机批处理"></a>脱机批处理</h2><p>脱机批处理系统由主机和卫星机组成。卫星机又称外围计算机，它不与主机直接连接，只与外部设备打交道。作业通过卫星机输入到磁带上，当主机需要输入作业时，就把输入带从卫星机的磁带机上取下，并装入到主机的磁带机上。于是，主机可以连续的处理由输入带输入的许多用户作业，并把这些作业的运行结果不断地输出到输出带上。最后，多个用户作业的输出结果再通过卫星机连接的打印机打印出来。</p>
 <blockquote>
 <p>脱机批处理产生的目的：缓解主机与外设的矛盾提高CPU的利用率。</p>
 </blockquote>
 <p><img src="/2019/05/21/操作系统1/110852508.jpg" alt></p>
-<h2 id="多道批处理系统："><a href="#多道批处理系统：" class="headerlink" title="多道批处理系统："></a>多道批处理系统：</h2><p>诞生时间：20世纪60年代</p>
-<h3 id="多道程序系统："><a href="#多道程序系统：" class="headerlink" title="多道程序系统："></a>多道程序系统：</h3><p>多道程序系统是控制多道程序同时运行的程序系统，由它决定在某一个时刻运行哪一个作业，或者说，是在计算机内存中同时存放几道互相独立的程序，使他们在管理程序控制之下，相互穿插地运行，即使多道程序在系统内并行工作。</p>
+<h2 id="多道批处理系统"><a href="#多道批处理系统" class="headerlink" title="多道批处理系统"></a>多道批处理系统</h2><p>诞生时间：20世纪60年代</p>
+<h3 id="多道程序系统"><a href="#多道程序系统" class="headerlink" title="多道程序系统"></a>多道程序系统</h3><p>多道程序系统是控制多道程序同时运行的程序系统，由它决定在某一个时刻运行哪一个作业，或者说，是在计算机内存中同时存放几道互相独立的程序，使他们在管理程序控制之下，相互穿插地运行，即使多道程序在系统内并行工作。</p>
 <p>主要特征：<br>1.多道，即计算机内存中同时存放几道相互独立的程序。<br>2.宏观上并行，同时进入系统的几道程序都处于运行过程中，即他们先后开始了各自的运行，但都未运行完毕。<br>3.微观上串行，内存中的多道程序轮流地或分时地占有CPU，交替执行</p>
 <blockquote>
 <p>多道程序系统的出现，标志着操作系统渐趋成熟的阶段，先后出现了作业调度管理、处理机管理、存储器管理、外部设备管理、文件系统管理等功能。<br>由于多个程序同时在计算机中运行，开始有了空间隔离的概念，只有内存空间的隔离，才能让数据更加安全、稳定。<br>出了空间隔离之外，多道技术还第一次体现了时空复用的特点，遇到IO操作就切换程序，使得cpu的利用率提高了，计算机的工作效率也随之提高。</p>
 </blockquote>
 <p><img src="/2019/05/21/操作系统1/827651-20180110183621582-153745188.png" alt></p>
-<h3 id="多道批处理系统：-1"><a href="#多道批处理系统：-1" class="headerlink" title="多道批处理系统："></a>多道批处理系统：</h3><p>多道批处理系统有两个含义：一是多道，二是批处理。多道是在计算机内存中同时存放多个作业，它们在操作系统的控制下并发执行，而且在外存中还存放有大量的作业，并组成一个后备作业队列，系统按一定的调度原则每次从后备作业队列中选取一个或多个作业调入内存运行。<br><img src="/2019/05/21/操作系统1/827651-20180110183714426-287499114.png" alt></p>
+<h3 id="多道批处理系统-1"><a href="#多道批处理系统-1" class="headerlink" title="多道批处理系统"></a>多道批处理系统</h3><p>多道批处理系统有两个含义：一是多道，二是批处理。多道是在计算机内存中同时存放多个作业，它们在操作系统的控制下并发执行，而且在外存中还存放有大量的作业，并组成一个后备作业队列，系统按一定的调度原则每次从后备作业队列中选取一个或多个作业调入内存运行。<br><img src="/2019/05/21/操作系统1/827651-20180110183714426-287499114.png" alt></p>
 <h1 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h1><blockquote>
 <h2 id="分时系统的起源"><a href="#分时系统的起源" class="headerlink" title="分时系统的起源"></a>分时系统的起源</h2><p>背景：在多道批处理系统的时代，人们主要提高对系统资源的利用率和系统的吞吐量。但是由于时代的发展，人们又提出了另一个问题，在人们将制作在卡片上的程序交由计算机执行时，用户无法即时获得程序运行的结果。这一问题很有可能导致很严重的后果发生。基于这个问题，人们考虑能否让人回到计算机前来，每个人即时管理自己的程序，但又由于20世纪60年代计算机还十分昂贵，所以一台计算机要同时供多个用户共享使用，每个用户在共享一台计算机时都希望能像独占时一样，不仅可以随时与计算机进行交互，而且还不会感觉到其他用户的存在。于是分时系统就在这样情况下诞生。</p>
 <h2 id="分时系统的介绍"><a href="#分时系统的介绍" class="headerlink" title="分时系统的介绍"></a>分时系统的介绍</h2><p>分时系统是允许多个联机用户同时使用一台计算机进行处理的系统。系统将CPU在时间上分割成很小的时间段，每个时间段称为一个时间片。每个联机用户通过终端以交互方式控制程序的运行，系统把CPU时间轮流分配给个联机作业，每个作业只运行极短的时间片，从而使每个用户都有一种“独占计算机”的感觉。</p>
@@ -846,7 +846,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -875,7 +875,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -898,7 +900,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -964,7 +968,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#手工操作-穿孔卡片"><span class="nav-number">1.</span> <span class="nav-text">手工操作(穿孔卡片)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#批处理系统-磁带存储"><span class="nav-number">2.</span> <span class="nav-text">批处理系统(磁带存储)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的起源"><span class="nav-number">2.1.</span> <span class="nav-text">实时操作系统的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批处理系统的定义"><span class="nav-number">2.2.</span> <span class="nav-text">批处理系统的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联机批处理："><span class="nav-number">2.3.</span> <span class="nav-text">联机批处理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脱机批处理："><span class="nav-number">2.4.</span> <span class="nav-text">脱机批处理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多道批处理系统："><span class="nav-number">2.5.</span> <span class="nav-text">多道批处理系统：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多道程序系统："><span class="nav-number">2.5.1.</span> <span class="nav-text">多道程序系统：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多道批处理系统：-1"><span class="nav-number">2.5.2.</span> <span class="nav-text">多道批处理系统：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分时系统"><span class="nav-number">3.</span> <span class="nav-text">分时系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的起源"><span class="nav-number">3.1.</span> <span class="nav-text">分时系统的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的介绍"><span class="nav-number">3.2.</span> <span class="nav-text">分时系统的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统实现的关键问题"><span class="nav-number">3.3.</span> <span class="nav-text">分时系统实现的关键问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#人—机交互问题"><span class="nav-number">3.3.1.</span> <span class="nav-text">人—机交互问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#共享主机问题"><span class="nav-number">3.3.2.</span> <span class="nav-text">共享主机问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的主要特征"><span class="nav-number">3.4.</span> <span class="nav-text">分时系统的主要特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的优点"><span class="nav-number">3.5.</span> <span class="nav-text">分时系统的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统实例解析"><span class="nav-number">3.6.</span> <span class="nav-text">分时系统实例解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实时操作系统"><span class="nav-number">4.</span> <span class="nav-text">实时操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的起源-1"><span class="nav-number">4.1.</span> <span class="nav-text">实时操作系统的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的定义"><span class="nav-number">4.2.</span> <span class="nav-text">实时操作系统的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的分类"><span class="nav-number">4.3.</span> <span class="nav-text">实时操作系统的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实时过程控制"><span class="nav-number">4.3.1.</span> <span class="nav-text">实时过程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实时信息处理"><span class="nav-number">4.3.2.</span> <span class="nav-text">实时信息处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的特点"><span class="nav-number">4.4.</span> <span class="nav-text">实时操作系统的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时系统的代表——VxWorks"><span class="nav-number">4.5.</span> <span class="nav-text">实时系统的代表——VxWorks</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#手工操作-穿孔卡片"><span class="nav-number">1.</span> <span class="nav-text">手工操作(穿孔卡片)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#批处理系统-磁带存储"><span class="nav-number">2.</span> <span class="nav-text">批处理系统(磁带存储)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的起源"><span class="nav-number">2.1.</span> <span class="nav-text">实时操作系统的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批处理系统的定义"><span class="nav-number">2.2.</span> <span class="nav-text">批处理系统的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联机批处理"><span class="nav-number">2.3.</span> <span class="nav-text">联机批处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脱机批处理"><span class="nav-number">2.4.</span> <span class="nav-text">脱机批处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多道批处理系统"><span class="nav-number">2.5.</span> <span class="nav-text">多道批处理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多道程序系统"><span class="nav-number">2.5.1.</span> <span class="nav-text">多道程序系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多道批处理系统-1"><span class="nav-number">2.5.2.</span> <span class="nav-text">多道批处理系统</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分时系统"><span class="nav-number">3.</span> <span class="nav-text">分时系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的起源"><span class="nav-number">3.1.</span> <span class="nav-text">分时系统的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的介绍"><span class="nav-number">3.2.</span> <span class="nav-text">分时系统的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统实现的关键问题"><span class="nav-number">3.3.</span> <span class="nav-text">分时系统实现的关键问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#人—机交互问题"><span class="nav-number">3.3.1.</span> <span class="nav-text">人—机交互问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#共享主机问题"><span class="nav-number">3.3.2.</span> <span class="nav-text">共享主机问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的主要特征"><span class="nav-number">3.4.</span> <span class="nav-text">分时系统的主要特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统的优点"><span class="nav-number">3.5.</span> <span class="nav-text">分时系统的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分时系统实例解析"><span class="nav-number">3.6.</span> <span class="nav-text">分时系统实例解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实时操作系统"><span class="nav-number">4.</span> <span class="nav-text">实时操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的起源-1"><span class="nav-number">4.1.</span> <span class="nav-text">实时操作系统的起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的定义"><span class="nav-number">4.2.</span> <span class="nav-text">实时操作系统的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的分类"><span class="nav-number">4.3.</span> <span class="nav-text">实时操作系统的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实时过程控制"><span class="nav-number">4.3.1.</span> <span class="nav-text">实时过程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实时信息处理"><span class="nav-number">4.3.2.</span> <span class="nav-text">实时信息处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时操作系统的特点"><span class="nav-number">4.4.</span> <span class="nav-text">实时操作系统的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实时系统的代表——VxWorks"><span class="nav-number">4.5.</span> <span class="nav-text">实时系统的代表——VxWorks</span></a></li></ol></li></ol></div>
             
 
           </div>
