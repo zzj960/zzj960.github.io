@@ -124,20 +124,20 @@
     }
 </style>
 
-  <meta name="description" content="内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。我们将操作系统的代码分成两部分。内核所在的地址空间称作内核空间。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。通常，一个程序会跨越两个空间。当执行到内河空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。">
+  <meta name="description" content="内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。我们将操作系统的代码分成两部分。内核所在的地址空间称作内核空间。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。通常，一个程序会跨越两个空间。当执行到内核空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。">
 <meta name="keywords" content="计算机,操作系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对进程的补充——内核">
 <meta property="og:url" content="http://zzj960.github.io/2019/06/03/对进程的补充——内核/index.html">
 <meta property="og:site_name" content="Cosmogram">
-<meta property="og:description" content="内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。我们将操作系统的代码分成两部分。内核所在的地址空间称作内核空间。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。通常，一个程序会跨越两个空间。当执行到内河空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。">
+<meta property="og:description" content="内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。我们将操作系统的代码分成两部分。内核所在的地址空间称作内核空间。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。通常，一个程序会跨越两个空间。当执行到内核空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/03/对进程的补充——内核/942a949e1c39a71d129c5836a5a0ccbf20140221042332.png">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/03/对进程的补充——内核/fc14b80aa29aafc174432f4167535e9e20140221043037.png">
-<meta property="og:updated_time" content="2019-06-03T12:10:16.524Z">
+<meta property="og:updated_time" content="2019-06-04T02:18:45.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对进程的补充——内核">
-<meta name="twitter:description" content="内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。我们将操作系统的代码分成两部分。内核所在的地址空间称作内核空间。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。通常，一个程序会跨越两个空间。当执行到内河空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。">
+<meta name="twitter:description" content="内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。我们将操作系统的代码分成两部分。内核所在的地址空间称作内核空间。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。通常，一个程序会跨越两个空间。当执行到内核空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。">
 <meta name="twitter:image" content="http://zzj960.github.io/2019/06/03/对进程的补充——内核/942a949e1c39a71d129c5836a5a0ccbf20140221042332.png">
 
 
@@ -458,12 +458,24 @@
                 
               
 
-              <time title="创建时间：2019-06-03 10:42:14 / 修改时间：20:10:16" itemprop="dateCreated datePublished" datetime="2019-06-03T10:42:14+08:00">2019-06-03</time>
+              <time title="创建时间：2019-06-03 10:42:14" itemprop="dateCreated datePublished" datetime="2019-06-03T10:42:14+08:00">2019-06-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-04 10:18:45" itemprop="dateModified" datetime="2019-06-04T10:18:45+08:00">2019-06-04</time>
               
             
           </span>
@@ -546,7 +558,7 @@
       
 
       
-        <p>内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。<br>我们将操作系统的代码分成两部分。<code>内核所在的地址空间称作内核空间</code>。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。<br>通常，<code>一个程序会跨越两个空间</code>。当执行到内河空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。</p>
+        <p>内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。<br>我们将操作系统的代码分成两部分。<code>内核所在的地址空间称作内核空间</code>。而在内核以外的统称为外部管理程序，它们大部分是对外围设备的管理和界面操作。外部管理程序与用户进程所占据的地址空间称为外部空间。<br>通常，<code>一个程序会跨越两个空间</code>。当执行到内核空间的一段代码时，我们称程序处于内核态，而当程序执行到外部空间代码时，我们称程序处于用户态。</p>
 <a id="more"></a>
 <h1 id="Linux内核的核心功能"><a href="#Linux内核的核心功能" class="headerlink" title="Linux内核的核心功能"></a>Linux内核的核心功能</h1><p>如下图所示，Linux内核只是Linux操作系统一部分。对下，它管理系统的所有硬件设备；对上，它通过系统调用，向Library Routine（例如C库）或者其它应用程序提供接口。</p>
 <p><img src="/2019/06/03/对进程的补充——内核/942a949e1c39a71d129c5836a5a0ccbf20140221042332.png" alt></p>
@@ -771,7 +783,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
