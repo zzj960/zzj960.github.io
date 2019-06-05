@@ -10,7 +10,7 @@
 
 'use strict';
 
-var precacheConfig = [["/about/index.html","49bb37f65a9bc1de53f5601e83c1f109"],["/index.html","987cf1e87ea85539621cedbdf6f5da4b"]];
+var precacheConfig = [["/about/index.html","4ef79f8d90aa19424e8d597a1df843a9"],["/bundle.js","02b4686970c7f8326123d10c322081f9"],["/index.html","57ef2c17a1431f3bbee370c66642dcd2"],["/js/src/instantclick.js","0721863189b8dc67fffc3a75d946f6be"],["/search.xml","e9a1d1d46660977e3093f34fe7bd7e21"],["/uploads/red.jpg","05b6fa256639ed6b757a7adda457680a"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 var firstRegister = 1; // 默认1是首次安装SW， 0是SW更新
 
@@ -286,7 +286,7 @@ self.addEventListener('activate', function (event) {
 
 // Runtime cache 配置转换后的 toolbox 代码.
 
-toolbox.router.get("/**/*", toolbox.cacheFirst, {"origin":"io-oi.me"});
+toolbox.router.get("/**/*", toolbox.cacheFirst, {"origin":"zzj960.github.io"});
 
 
 
