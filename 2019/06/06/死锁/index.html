@@ -124,17 +124,22 @@
     }
 </style>
 
-  <meta name="description" content="The Proletariate">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cosmogram">
-<meta property="og:url" content="http://zzj960.github.io/README.html">
+  <meta name="description" content="死锁的产生条件：想知道死锁怎么产生，首先要了解什么是死锁">
+<meta name="keywords" content="计算机,操作系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="死锁">
+<meta property="og:url" content="http://zzj960.github.io/2019/06/06/死锁/index.html">
 <meta property="og:site_name" content="Cosmogram">
-<meta property="og:description" content="The Proletariate">
+<meta property="og:description" content="死锁的产生条件：想知道死锁怎么产生，首先要了解什么是死锁">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-05T08:22:18.029Z">
+<meta property="og:image" content="http://zzj960.github.io/2019/06/06/死锁/20180731103816331.png">
+<meta property="og:image" content="http://zzj960.github.io/2019/06/06/死锁/20180731103850412.png">
+<meta property="og:image" content="http://zzj960.github.io/2019/06/06/死锁/20180731103912949.png">
+<meta property="og:updated_time" content="2019-06-06T07:28:58.114Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cosmogram">
-<meta name="twitter:description" content="The Proletariate">
+<meta name="twitter:title" content="死锁">
+<meta name="twitter:description" content="死锁的产生条件：想知道死锁怎么产生，首先要了解什么是死锁">
+<meta name="twitter:image" content="http://zzj960.github.io/2019/06/06/死锁/20180731103816331.png">
 
 
 
@@ -142,7 +147,7 @@
 
   
   
-  <link rel="canonical" href="http://zzj960.github.io/README">
+  <link rel="canonical" href="http://zzj960.github.io/2019/06/06/死锁/">
 
 
 
@@ -152,7 +157,7 @@
   };
 </script>
 
-  <title> | Cosmogram</title>
+  <title>死锁 | Cosmogram</title>
   
 
 
@@ -391,73 +396,337 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zzj960.github.io/2019/06/06/死锁/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CGZ">
+      <meta itemprop="description" content="The Proletariate">
+      <meta itemprop="image" content="/uploads/red.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cosmogram">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">死锁
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-06 14:36:23 / 修改时间：15:28:58" itemprop="dateCreated datePublished" datetime="2019-06-06T14:36:23+08:00">2019-06-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/06/06/死锁/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/06/死锁/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/06/06/死锁/" class="leancloud_visitors" data-flag-title="死锁">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2.3k</span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>死锁的产生条件：<br>想知道死锁怎么产生，首先要了解什么是死锁</p>
+<a id="more"></a>
+<h1 id="死锁的定义"><a href="#死锁的定义" class="headerlink" title="死锁的定义"></a>死锁的定义</h1><p>多个进行相互等待对方资源，在得到所有资源继续运行之前，都不会释放自己已有的资源，这样造成了循环等待的现象，称为死锁。</p>
+<h1 id="产生死锁的四大必要条件"><a href="#产生死锁的四大必要条件" class="headerlink" title="产生死锁的四大必要条件"></a>产生死锁的四大必要条件</h1><p><strong>①资源互斥/资源不共享</strong><br>每个资源要么已经分配给了一个进程，要么是可用的，只有这两种状态，资源不可以被共享使用，所以所谓的互斥是指：资源不共享，如果被使用，只能被一个进程使用。</p>
+<p><strong>②占有和等待/请求并保持</strong><br>已经得到资源的进程还能继续请求新的资源，所以个人觉得叫占有并请求也许更好理解。</p>
+<p><strong>③资源不可剥夺</strong><br>当一个资源分配给了一个进程后，其它需要该资源的进程不能强制性获得该资源，除非该资源的当前占有者显示地释放该资源。</p>
+<p><strong>④环路等待</strong><br>死锁发生时，系统中一定有由两个或两个以上的进程组成的一条环路，环路上的每个进程都在等待下一个进程所占有的资源。</p>
+<h1 id="防止死锁的方法"><a href="#防止死锁的方法" class="headerlink" title="防止死锁的方法"></a>防止死锁的方法</h1><blockquote>
+<p>①防止死锁的发生只需破坏死锁产生的四个必要条件之一即可。<br>②下面的方法开销非常之大，目前没有一个操作系统可以实现。<br>③因此，目前使用的方法是避免死锁，而不是防止死锁。<br>④这部分的内容大致浏览简单了解一遍即可，只要能在某些选择题中判断出选项对应的是下面四个方法中的哪个就可以了。</p>
+</blockquote>
+<h2 id="破坏互斥条件"><a href="#破坏互斥条件" class="headerlink" title="破坏互斥条件"></a>破坏互斥条件</h2><p><code>方法</code>：如果允许系统资源都能共享使用，则系统不会进入死锁状态。<br><code>缺点</code>：有些资源根本不能同时访问，如打印机等临界资源只能互斥使用。所以，破坏互斥条件而预防死锁的方法不太可行，而且在有的场合应该保护这种互斥性。</p>
+<h2 id="破坏请求并保持条件"><a href="#破坏请求并保持条件" class="headerlink" title="破坏请求并保持条件"></a>破坏请求并保持条件</h2><p><code>方法</code>：釆用预先静态分配方法，即进程在运行前一次申请完它所需要的全部资源，在它的资源未满足前，不把它投入运行。一旦投入运行后，这些资源就一直归它所有，也不再提出其他资源请求，这样就可以保证系统不会发生死锁。<br><code>缺点</code>：系统资源被严重浪费，其中有些资源可能仅在运行初期或运行快结束时才使用，甚至根本不使用。而且还会导致“饥饿”现象，当由于个别资源长期被其他进程占用时，将致使等待该资源的进程迟迟不能开始运行。</p>
+<h2 id="破坏不可剥夺条件"><a href="#破坏不可剥夺条件" class="headerlink" title="破坏不可剥夺条件"></a>破坏不可剥夺条件</h2><p><code>方法</code>：当一个已保持了某些不可剥夺资源的进程，请求新的资源而得不到满足时，它必须释放已经保持的所有资源，待以后需要时再重新申请。这意味着，一个进程已占有的资源会被暂时释放，或者说是被剥夺了，或从而破坏了不可剥夺条件。<br><code>缺点</code>：该策略实现起来比较复杂，释放已获得的资源可能造成前一阶段工作的失效，反复地申请和释放资源会增加系统开销，降低系统吞吐量。这种方法常用于状态易于保存和恢复的资源，如CPU的寄存器及内存资源，一般不能用于打印机之类的资源。</p>
+<h2 id="破坏循环等待条件"><a href="#破坏循环等待条件" class="headerlink" title="破坏循环等待条件"></a>破坏循环等待条件</h2><p><code>方法</code>：为了破坏循环等待条件，可釆用顺序资源分配法。首先给系统中的资源编号，规定每个进程，必须按编号递增的顺序请求资源，同类资源一次申请完。也就是说，只要进程提出申请分配资源Ri，则该进程在以后的资源申请中，只能申请编号大于Ri的资源。<br><code>缺点</code>：这种方法存在的问题是，编号必须相对稳定，这就限制了新类型设备的增加；尽管在为资源编号时已考虑到大多数作业实际使用这些资源的顺序，但也经常会发生作业使用资源的顺序与系统规定顺序不同的情况，造成资源的浪费；此外，这种按规定次序申请资源的方法，也必然会给用户的编程带来麻烦。</p>
+<h1 id="避免死锁的算法"><a href="#避免死锁的算法" class="headerlink" title="避免死锁的算法"></a>避免死锁的算法</h1><h2 id="判断“系统安全状态”法"><a href="#判断“系统安全状态”法" class="headerlink" title="判断“系统安全状态”法"></a>判断“系统安全状态”法</h2><p>在进行系统资源分配之前，先计算此次资源分配的安全性。若此次分配不会导致系统进入不安全状态，则将资源分配给进程； 否则，让进程等待。 </p>
+<h2 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h2><p>1、申请的贷款额度不能超过银行现有的资金总额<br>2、分批次向银行提款，但是贷款额度不能超过一开始最大需求量的总额<br>3、暂时不能满足客户申请的资金额度时，在有限时间内给予贷款<br>4、客户要在规定的时间内还款</p>
+<h1 id="死锁的检测"><a href="#死锁的检测" class="headerlink" title="死锁的检测"></a>死锁的检测</h1><blockquote>
+<p>该部分讲述如何判断是否产生死锁</p>
+</blockquote>
+<h2 id="画出资源分配图"><a href="#画出资源分配图" class="headerlink" title="画出资源分配图"></a>画出资源分配图</h2><p>系统死锁，可利用资源分配图来描述。如下图所示，用长方形代表一个进程，用框代表一类资源。由于一种类型的资源可能有多个，用框中的一个点代表一类资源中的一个资源。从进程到资源的有向边叫请求边，表示该进程申请一个单位的该类资源；从资源到进程的边叫分配边，表示该类资源已经有一个资源被分配给了该进程。<br><img src="/2019/06/06/死锁/20180731103816331.png" alt></p>
+<h2 id="简化资源分配图"><a href="#简化资源分配图" class="headerlink" title="简化资源分配图"></a>简化资源分配图</h2><p><strong>第一步：</strong>先看A资源，它有三个箭头是向外的，因此它一共给进程分配了3个资源，此时，A没有空闲的资源剩余。<br><strong>第二步：</strong>再看B资源，它有一个箭头是向外的，因此它一共给进程分配了1个资源，此时，B还剩余一个空闲的资源没分配。<br><strong>第三步：</strong>看完资源，再来看进程，先看进程P2，它只申请一个A资源，但此时A资源已经用光了，所以，进程P2进入阻塞状态，因此，进程P2暂时不能化成孤立的点。<br><strong>第四步：</strong>再看进程P1，它只申请一个B资源，此时，系统还剩余一个B资源没分配，因此，可以满足P1的申请。这样，进程P1便得到了它的全部所需资源，所以它不会进入阻塞状态，可以一直运行，等它运行完后，我们再把它的所有的资源释放。相当于：可以把P1的所有的边去掉，变成一个孤立的点，如下图所示：<br><img src="/2019/06/06/死锁/20180731103850412.png" alt><br><strong>第五步：</strong>进程P1运行完后，释放其所占有的资源（2个A资源和1个B资源），系统回收这些资源后，空闲的资源便变成2个A资源和1个B资源，由于进程P2一直在申请一个A资源，所以此时，系统能满足它的申请。这样，进程P2便得到了它的全部所需资源，所以它不会进入阻塞状态，可以一直运行，等它运行完后，我们再把它的所有的资源释放。相当于：可以把P2的所有的边都去掉，化成一个孤立的点，变成下图：<br><img src="/2019/06/06/死锁/20180731103912949.png" alt></p>
+<blockquote>
+<p>若能消去图中所有的边，则称该图是可完全简化的，如上图</p>
+</blockquote>
+<h2 id="使用死锁定理判断"><a href="#使用死锁定理判断" class="headerlink" title="使用死锁定理判断"></a>使用死锁定理判断</h2><p><strong>死锁定理：</strong><br>①如果资源分配图中没有环路，则系统没有死锁；<br>②如果资源分配图中出现了环路，则系统可能有死锁。<br><strong>或者说：</strong><br><strong>当且仅当S状态的资源分配图是不可完全简化的时候，系统状态则是死锁状态</strong></p>
+<h1 id="死锁的解除"><a href="#死锁的解除" class="headerlink" title="死锁的解除"></a>死锁的解除</h1><p>1、资源剥夺法<br>挂起某些死锁进程，并抢占它的资源，将这些资源分配给其他的死锁进程。但应防止被挂起的进程长时间得不到资源，而处于资源匮乏的状态。</p>
+<p>2、撤销进程法<br>强制撤销部分、甚至全部死锁进程并剥夺这些进程的资源。撤销的原则可以按进程优先级和撤销进程代价的高低进行。</p>
+<p>3、进程回退法<br>让一（多）个进程回退到足以回避死锁的地步，进程回退时自愿释放资源而不是被剥夺。要求系统保持进程的历史信息，设置还原点。</p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>谁都是要吃饭的嘛。</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/uploads/wechatpay.png" alt="CGZ 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/uploads/alipay.jpg" alt="CGZ 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机/" rel="tag"><i class="fa fa-tag"></i> 计算机</a>
+          
+            <a href="/tags/操作系统/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+            
+              <div>
+                
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/06/进程同步/" rel="next" title="进程同步">
+                <i class="fa fa-chevron-left"></i> 进程同步
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -490,8 +759,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -508,7 +786,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -619,6 +897,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#死锁的定义"><span class="nav-number">1.</span> <span class="nav-text">死锁的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#产生死锁的四大必要条件"><span class="nav-number">2.</span> <span class="nav-text">产生死锁的四大必要条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#防止死锁的方法"><span class="nav-number">3.</span> <span class="nav-text">防止死锁的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#破坏互斥条件"><span class="nav-number">3.1.</span> <span class="nav-text">破坏互斥条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#破坏请求并保持条件"><span class="nav-number">3.2.</span> <span class="nav-text">破坏请求并保持条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#破坏不可剥夺条件"><span class="nav-number">3.3.</span> <span class="nav-text">破坏不可剥夺条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#破坏循环等待条件"><span class="nav-number">3.4.</span> <span class="nav-text">破坏循环等待条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#避免死锁的算法"><span class="nav-number">4.</span> <span class="nav-text">避免死锁的算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#判断“系统安全状态”法"><span class="nav-number">4.1.</span> <span class="nav-text">判断“系统安全状态”法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#银行家算法"><span class="nav-number">4.2.</span> <span class="nav-text">银行家算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#死锁的检测"><span class="nav-number">5.</span> <span class="nav-text">死锁的检测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#画出资源分配图"><span class="nav-number">5.1.</span> <span class="nav-text">画出资源分配图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简化资源分配图"><span class="nav-number">5.2.</span> <span class="nav-text">简化资源分配图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用死锁定理判断"><span class="nav-number">5.3.</span> <span class="nav-text">使用死锁定理判断</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#死锁的解除"><span class="nav-number">6.</span> <span class="nav-text">死锁的解除</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
