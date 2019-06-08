@@ -2002,7 +2002,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #57ffe7;
+  background: #a6a758;
 }
 .feed-link,
 .chat {
@@ -3383,17 +3383,6 @@ body {
 
           
           
-            <span id="/2019/06/08/内存管理/" class="leancloud_visitors" data-flag-title="内存管理">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
 
           
             <span class="post-meta-divider">|</span>
@@ -3792,11 +3781,11 @@ body {
           
           </div>
 
+
           
             
           
-          <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=50m4w8ggjoa&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=times_new_roman&amp;l=0&amp;v0=10" async="async"></script>
-
+          <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=50m4w8ggjoa&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
         </div>
       </div>
 
@@ -4018,10 +4007,6 @@ body {
 
 
   
-  
-  
-
-
 
   
 
@@ -4408,57 +4393,6 @@ body {
       if (shouldDismissSearchPopup) {
         onPopupClose();
       }
-    });;function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.time + 1);
-            
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-            
-              .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-              })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz',
-                'X-LC-Key': 'lmvjSqdLOJydVwsV7eVUhWVG',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            addCount(Counter);
-          
-        });
     });;$('.highlight').each(function(i, e) {
     var $wrap = $('<div>').addClass('highlight-wrap');
     $(e).after($wrap);

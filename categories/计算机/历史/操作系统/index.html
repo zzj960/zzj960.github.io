@@ -1997,7 +1997,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #57ffe7;
+  background: #a6a758;
 }
 .feed-link,
 .chat {
@@ -3506,11 +3506,11 @@ body {
           
           </div>
 
+
           
             
           
-          <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=50m4w8ggjoa&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=times_new_roman&amp;l=0&amp;v0=10" async="async"></script>
-
+          <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=50m4w8ggjoa&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
         </div>
       </div>
 
@@ -3709,10 +3709,6 @@ body {
 
 
   
-  
-  
-
-
 
   
 
@@ -4083,67 +4079,6 @@ body {
       if (shouldDismissSearchPopup) {
         onPopupClose();
       }
-    });;function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz',
-                'X-LC-Key': 'lmvjSqdLOJydVwsV7eVUhWVG',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
     });;$('.highlight').each(function(i, e) {
     var $wrap = $('<div>').addClass('highlight-wrap');
     $(e).after($wrap);
