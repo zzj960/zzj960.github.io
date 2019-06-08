@@ -10,7 +10,7 @@
 
 'use strict';
 
-var precacheConfig = [["/about/index.html","a55c61da49c67a8b0b8056fe4e268605"],["/archives/index.html","6a02437cd65e8940a597b9285e32cb0c"],["/bundle.js","02b4686970c7f8326123d10c322081f9"],["/categories/index.html","30be6cc8fc08976d152f65b4407db173"],["/images/favicon-16x16-next.ico","c49ba8c36a5774b356b5eb1da436ec11"],["/index.html","5e98c4da010bbee0903be22d542b1ccf"],["/js/src/instantclick.js","0721863189b8dc67fffc3a75d946f6be"],["/search.xml","42f4a715d94b6ffa40bc6dadb2e20c6e"],["/tags/index.html","bf909815d807759ca454b3e68a0469e2"],["/uploads/red.jpg","05b6fa256639ed6b757a7adda457680a"]];
+var precacheConfig = [["/about/index.html","127ef57c7f361d4bbab9f2eb7a737995"],["/archives/index.html","56993b376ead56670f41e894e9116b88"],["/bundle.js","87e78160238d5da17ed14104fad86604"],["/categories/index.html","629c6d2736747e87758996292ff04afa"],["/images/favicon-16x16-next.ico","c49ba8c36a5774b356b5eb1da436ec11"],["/index.html","552d1052e121a2b69424a6e1eec6fcd5"],["/search.xml","39c6589a4c24ae2aa72b417ec4dfeefb"],["/tags/index.html","13a229a66051312c12a328072de665ed"],["/uploads/red.jpg","05b6fa256639ed6b757a7adda457680a"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 var firstRegister = 1; // 默认1是首次安装SW， 0是SW更新
 

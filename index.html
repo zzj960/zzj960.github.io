@@ -93,16 +93,13 @@
 
 
 
-  <meta name="description" content="No right without obligation; no obligation without right.">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Cosmogram">
 <meta property="og:url" content="http://zzj960.github.io/index.html">
 <meta property="og:site_name" content="Cosmogram">
-<meta property="og:description" content="No right without obligation; no obligation without right.">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cosmogram">
-<meta name="twitter:description" content="No right without obligation; no obligation without right.">
 
 
 
@@ -2000,7 +1997,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ed41ff;
+  background: #0449e4;
 }
 .feed-link,
 .chat {
@@ -2358,6 +2355,38 @@ pre .javascript .function {
   transform: translate(-50%, -50%);
   color: #ccc;
 }
+.copy-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #333;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  user-select: none;
+  outline: 0;
+}
+.highlight-wrap .copy-btn {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  right: 4px;
+  top: 8px;
+}
+.highlight-wrap:hover .copy-btn,
+.highlight-wrap .copy-btn:focus {
+  opacity: 1;
+}
+.highlight-wrap {
+  position: relative;
+}
 .page-archive .archive-page-counter {
   position: relative;
   top: 3px;
@@ -2617,7 +2646,7 @@ ul.breadcrumb li+li:last-child {
   overflow: hidden;
   padding: 0;
   width: 240px;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: initial;
   border-radius: initial;
 }
@@ -2651,7 +2680,7 @@ ul.breadcrumb li+li:last-child {
   box-sizing: border-box;
   padding: 40px;
   width: calc(100% - 252px);
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
@@ -2676,7 +2705,7 @@ ul.breadcrumb li+li:last-child {
   float: left;
   margin-left: -100%;
   width: 240px;
-  background: #f5f7f9;
+  background: rgba(255,255,255,0.7);
   box-shadow: none;
 }
 @media (max-width: 991px) {
@@ -2882,7 +2911,7 @@ ul.breadcrumb li+li:last-child {
   box-sizing: border-box;
   width: 240px;
   color: #555;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: initial;
   border-radius: initial;
   opacity: 0;
@@ -2970,7 +2999,7 @@ ul.breadcrumb li+li:last-child {
 .links-of-author-item a:hover,
 .links-of-author-item span.exturl:hover {
   border-radius: 4px;
-  background: #eee;
+  background: rgba(255,255,255,0.7);
 }
 .links-of-author-item .fa {
   margin-right: 2px;
@@ -3012,8 +3041,16 @@ ul.breadcrumb li+li:last-child {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-instantclick {
-  display: none;
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("/images/background.jfif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+  }
+  #footer a {
+    color: #eee;
+  }
 }</style><noscript>
   <style>
   .use-motion .motion-element,
@@ -3254,7 +3291,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -3295,12 +3332,24 @@ instantclick {
                 
               
 
-              <time title="创建时间：2019-06-06 14:36:23 / 修改时间：16:07:05" itemprop="dateCreated datePublished" datetime="2019-06-06T14:36:23+08:00">2019-06-06</time>
+              <time title="创建时间：2019-06-06 14:36:23" itemprop="dateCreated datePublished" datetime="2019-06-06T14:36:23+08:00">2019-06-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-07 10:20:16" itemprop="dateModified" datetime="2019-06-07T10:20:16+08:00">2019-06-07</time>
               
             
           </span>
@@ -3362,12 +3411,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 2.7k</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">5.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">5 分钟</span>
+              
+            </div>
           
 
           
@@ -3386,7 +3461,7 @@ instantclick {
 
       
         
-          <h1 id="死锁的定义"><a href="#死锁的定义" class="headerlink" title="死锁的定义"></a>死锁的定义</h1><p><strong><em>在多道程序系统中，由于多个进程的并发执行，改善了系统资源的利用率并提高了系统 的处理能力。然而，多个进程的并发执行也带来了新的问题——死锁。</em></strong>所谓死锁是指多个进程因竞争资源而造成的一种僵局（互相等待），若无外力作用，这些进程都将无法向前推进。</p>
+          <h1 id="死锁的定义"><a href="#死锁的定义" class="headerlink" title="死锁的定义"></a>死锁的定义</h1><p><strong><em>在多道程序系统中，由于多个进程的并发执行，改善了系统资源的利用率并提高了系统的处理能力。然而，多个进程的并发执行也带来了新的问题——死锁。</em></strong>所谓死锁是指多个进程因竞争资源而造成的一种僵局（互相等待），若无外力作用，这些进程都将无法向前推进。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -3454,7 +3529,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -3495,7 +3570,7 @@ instantclick {
                 
               
 
-              <time title="创建时间：2019-06-06 10:25:12 / 修改时间：14:46:59" itemprop="dateCreated datePublished" datetime="2019-06-06T10:25:12+08:00">2019-06-06</time>
+              <time title="创建时间：2019-06-06 10:25:12 / 修改时间：20:01:05" itemprop="dateCreated datePublished" datetime="2019-06-06T10:25:12+08:00">2019-06-06</time>
             
 
             
@@ -3562,12 +3637,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.3k</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
           
 
           
@@ -3654,7 +3755,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -3774,12 +3875,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.4k</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
           
 
           
@@ -3866,7 +3993,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -3986,12 +4113,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3.5k</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
           
 
           
@@ -4078,7 +4231,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -4198,12 +4351,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 750</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
           
 
           
@@ -4290,7 +4469,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -4410,12 +4589,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 685</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
           
 
           
@@ -4502,7 +4707,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -4622,12 +4827,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 3.1k</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">7.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
           
 
           
@@ -4714,7 +4945,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -4829,12 +5060,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.9k</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
           
 
           
@@ -4921,7 +5178,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -5048,12 +5305,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4k</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">7.9k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">7 分钟</span>
+              
+            </div>
           
 
           
@@ -5140,7 +5423,7 @@ instantclick {
 
     <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CGZ">
-      <meta itemprop="description" content="No right without obligation; no obligation without right.">
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/red.jpg">
     </span>
 
@@ -5255,12 +5538,38 @@ instantclick {
               
                 <span class="leancloud-visitors-count"></span>
             </span>
-            <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 459</span>
           
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
           
 
           
@@ -5369,7 +5678,7 @@ instantclick {
               <img class="site-author-image" itemprop="image" src="/uploads/red.jpg" alt="CGZ">
             
               <p class="site-author-name" itemprop="name">CGZ</p>
-              <div class="site-description motion-element" itemprop="description">No right without obligation; no obligation without right.</div>
+              <div class="site-description motion-element" itemprop="description"></div>
           </div>
 
           
@@ -5448,45 +5757,25 @@ instantclick {
           
 
           
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/zzj960" title="GitHub → https://github.com/zzj960" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-            </div>
-          
 
+          
           
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.dlut.edu.cn/" title="https://www.dlut.edu.cn/" rel="noopener" target="_blank">DLUT</a>
-                  </li>
-                
-              </ul>
-            </div>
+
+          <div>
           
+          <iframe frameborder="no" border="0" marginheight="0" width="110" height="110" src="//music.163.com/outchain/player?type=0&amp;id=2833880833&amp;auto=0&amp;height=66"></iframe>
+          
+          </div>
 
           
             
           
           <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=50m4w8ggjoa&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=times_new_roman&amp;l=0&amp;v0=10" async="async"></script>
+
+
         </div>
       </div>
 
@@ -5505,7 +5794,11 @@ instantclick {
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">© <span itemprop="copyrightYear">2019</span>
+        <!--
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+-->
+
+<div class="copyright">© <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -5516,9 +5809,22 @@ instantclick {
   
 </div>
 
+<!-- 
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+-->
         
 
 
@@ -5641,6 +5947,10 @@ instantclick {
 
 
   
+  
+  
+
+
 
   
 
@@ -5664,12 +5974,13 @@ instantclick {
 
   
 
-  
+
 
   
 
-  + 
-  + 
+  
+
+
 
 
 <script type="text/javascript" src="/bundle.js"></script><script type="text/javascript">if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -5681,15 +5992,15 @@ instantclick {
   });
   new Valine({
     el: '#comments',
-    verify: true,
-    notify: true,
+    verify: false,
+    notify: false,
     appId: 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz',
     appKey: 'lmvjSqdLOJydVwsV7eVUhWVG',
     placeholder: 'Just go go',
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: true,
+    visitor: false,
     lang: '' || 'zh-cn'
   });;// Popup Window;
     var isfetched = false;
@@ -6007,4 +6318,96 @@ instantclick {
       if (shouldDismissSearchPopup) {
         onPopupClose();
       }
-    });;InstantClick.init();</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+    });;function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'On7X1291EljTY9lnSIhhAsf4-gzGzoHsz',
+                'X-LC-Key': 'lmvjSqdLOJydVwsV7eVUhWVG',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });;$('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
