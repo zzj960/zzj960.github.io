@@ -2009,7 +2009,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #656bff;
+  background: #2f6bc3;
 }
 .feed-link,
 .chat {
@@ -3415,6 +3415,13 @@ body {
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
             <div class="post-symbolscount">
@@ -3427,7 +3434,7 @@ body {
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.8k</span>
+                <span title="本文字数">4.4k</span>
               
 
               
@@ -3441,7 +3448,7 @@ body {
                 
                   <span class="post-meta-item-text">阅读时长 ≈</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -3467,7 +3474,7 @@ body {
 <p>每个进程的task_struct和系统空间堆栈(系统表格区)存放位置如下：两个连续的物理页【《Linux内核源代码情景分析》271页】<br><img src="/2019/06/03/对进程的补充——PCB/718161-20160324213429011-1504988941.png" alt=""><br>系统堆栈空间不能动态扩展，在设计内核、驱动程序时要避免函数嵌套太深，同时不宜使用太大太多的局部变量，因为局部变量都是存在堆栈中的。</p>
 <h1 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h1><p>新进程的创建，首先在内存中为新进程创建一个task_struct结构，然后将父进程的task_struct内容复制其中，再修改部分数据。分配新的内核堆栈、新的PID、再将task_struct这个node添加到链表中。所谓创建，实际上是“复制”。</p>
 <p>子进程刚开始，内核并没有为它分配物理内存，而是以只读的方式共享父进程内存，只有当子进程写时，才复制。即“copy-on-write”。<br>fork都是由do_fork实现的，do_fork的简化流程如下图：<br><img src="/2019/06/03/对进程的补充——PCB/718161-20160324213456776-1773027859.png" alt=""><br>fork函数<br><img src="/2019/06/03/对进程的补充——PCB/718161-20160324213516886-529983291.jpg" alt=""><br>fork函数时调用一次，返回两次。在父进程和子进程中各调用一次。子进程中返回值为0，父进程中返回值为子进程的PID。程序员可以根据返回值的不同让父进程和子进程执行不同的代码。<br>一个形象的过程：<br><img src="/2019/06/03/对进程的补充——PCB/718161-20160324213542229-1409930744.jpg" alt=""><br>运行这样一段演示程序：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;unistd.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">{</span><br><span class="line"> pid_t pid;</span><br><span class="line"> char *message;</span><br><span class="line"> int n = 0;</span><br><span class="line"> pid = fork();</span><br><span class="line"> while(1){</span><br><span class="line"> if(pid &lt; 0){</span><br><span class="line"> perror("fork failed\n");</span><br><span class="line"> exit(1);</span><br><span class="line"> }</span><br><span class="line"> else if(pid == 0){</span><br><span class="line"> n--;</span><br><span class="line"> printf("child's n is:%d\n",n);</span><br><span class="line"> }</span><br><span class="line"> else{</span><br><span class="line"> n++;</span><br><span class="line"> printf("parent's n is:%d\n",n);</span><br><span class="line"> }</span><br><span class="line"> sleep(1);</span><br><span class="line"> }</span><br><span class="line"> exit(0);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight awk"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;unistd.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">{</span><br><span class="line"> pid_t pid;</span><br><span class="line"> char *message;</span><br><span class="line"> int n = <span class="number">0</span>;</span><br><span class="line"> pid = fork();</span><br><span class="line"> <span class="keyword">while</span>(<span class="number">1</span>){</span><br><span class="line"> <span class="keyword">if</span>(pid &lt; <span class="number">0</span>){</span><br><span class="line"> perror(<span class="string">"fork failed\n"</span>);</span><br><span class="line"> <span class="keyword">exit</span>(<span class="number">1</span>);</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">else</span> <span class="keyword">if</span>(pid == <span class="number">0</span>){</span><br><span class="line"> n--;</span><br><span class="line"> printf(<span class="string">"child's n is:%d\n"</span>,n);</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">else</span>{</span><br><span class="line"> n++;</span><br><span class="line"> printf(<span class="string">"parent's n is:%d\n"</span>,n);</span><br><span class="line"> }</span><br><span class="line"> sleep(<span class="number">1</span>);</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">exit</span>(<span class="number">0</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
       
     </div>
 
@@ -3660,7 +3667,7 @@ body {
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -3783,9 +3790,7 @@ body {
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <!--
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
--->
+        <script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <div class="copyright">© <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
@@ -3814,7 +3819,36 @@ body {
 </span>
 </div>
 -->
+
+
+
         
+<div class="busuanzi-count">
+  <script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -3974,6 +4008,9 @@ body {
   
 
   
+
+
+
 
 
 
@@ -4411,4 +4448,4 @@ body {
         $b.text('复制');
       }, 300);
     }).append(e);
-  })</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+  })</script></body></html><!--单击显示文字-->
