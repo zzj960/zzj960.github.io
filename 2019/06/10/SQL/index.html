@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Cosmogram">
 <meta property="og:description" content="认识SQL">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-13T09:05:44.782Z">
+<meta property="og:updated_time" content="2019-06-15T14:16:53.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL">
 <meta name="twitter:description" content="认识SQL">
@@ -2002,7 +2002,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff0dd1;
+  background: #ff8;
 }
 .feed-link,
 .chat {
@@ -3343,7 +3343,7 @@ body {
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-13 17:05:44" itemprop="dateModified" datetime="2019-06-13T17:05:44+08:00">2019-06-13</time>
+                <time title="修改时间：2019-06-15 22:16:53" itemprop="dateModified" datetime="2019-06-15T22:16:53+08:00">2019-06-15</time>
               
             
           </span>
@@ -3419,7 +3419,7 @@ body {
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">2.3k</span>
               
 
               
@@ -3454,42 +3454,29 @@ body {
 
       
         <h1 id="认识SQL"><a href="#认识SQL" class="headerlink" title="认识SQL"></a>认识SQL</h1><a id="more"></a>
-<p>(1) 什么是SQL？</p>
-<p>　　1.SQL 指结构化查询语言</p>
-<p>　　2.SQL 使我们有能力访问数据库</p>
-<p>　　3.SQL 是一种 ANSI 的标准计算机语言</p>
-<p>　　注意：ANSI，美国标准</p>
-<p>(2) SQL能做什么？</p>
-<p>SQL 面向数据库执行查询<br>SQL 可从数据库取回数据<br>SQL 可在数据库中插入新的记录<br>SQL 可更新数据库中的数据<br>SQL 可从数据库删除记录<br>SQL 可创建新数据库<br>SQL 可在数据库中创建新表<br>SQL 可在数据库中创建存储过程<br>SQL 可在数据库中创建视图<br>SQL 可以设置表、存储过程和视图的权限<br>(3) 数据库系统</p>
-<p>　　什么是数据库?举个例子来说明这个问题：每个人都有很多亲戚和朋友，为了保持与他们的联系，我们常常用一个笔记本将他们的姓名、地址、电话等信息都记录下来，这样要査谁的电话或地址就很方便了。这个“通讯录”就是一个最简单的“数据库”，每个人的姓名、地址、电话等信息就是这个数据库中的“数据”。我们可以在笔记本这个“数据库”中添加新朋友的个人信息，也可以由于某个朋友的电话变动而修改他的电话号码这个“数据”。不过说到底，我们使用笔记本这个“数据库”还是为了能随时査到某位亲戚或朋友的地址、邮编或电话号码这些“数据”。</p>
-<p>　　数据库(Database)是按照数据结构来组织、储存和管理数据的建立在计算机存储设备上的仓库。</p>
-<p>　　MS Access、DB2、Informix、MS SQL Server、Oracle、Sybase 以及其他数据库系统         PS:好多我也没用过。</p>
-<p>他们都有一些相似的地方，比如(SELECT、UPDATE、DELETE、INSERT、WHERE 等等)，当然大多数据库都有自己的扩张。可以了解了解。</p>
-<p>(4) 数据库表</p>
-<p>　　一个数据库通常包含一个或多个表。每个表由一个名字标识(表名)，表是相关的数据项的集合，它由列和行组成。</p>
-<p>　　1.字段。</p>
-<p>　　每个表都可以分解为更小的项。这些项被称为“字段”。字段是表里的一列，用于保持每条记录的特定信息。</p>
-<p>　　2.记录或一行数据。</p>
-<p>　　记录，也被称为一行数据，是表里的各行。在关系型数据库的表里，一行数据是指一条完整的记录。</p>
-<p>　　3.列。</p>
-<p>　　列是表里的垂直的一项，包含表里特定字段的全部信息。</p>
-<p>　　4.主键。</p>
-<p>　　主键用于区分表里的每一条数据，它通常是在表创建过程中初始化的。主键的特性确保了每一条记录都是唯一的。</p>
-<p>　　5.NULL值。</p>
-<p>　　NULL 是表示“没有值”的专用术语。如果表中某个字段的值是NULL，其表现形式就是字段为空，其值就是没有值。NULL并不等于0或空格。值为NULL的字段在表创建过程中会保持为空。</p>
-<p>　　6.索引</p>
-<p>　　为了提高访问数据库的效率，可以对数据库使用索引。当数据库较大时，为了查找指定的记录，则使用索引和不使用索引的效率有很大差别。索引实际上是一种特殊类型的表，其中含有关键字段的值(由用户定义)和指向实际记录位置的指针，这些值和指针按照特定的顺序(也由用户定义)存储，从而可以以较快的速度查找到所需要的数据记录。</p>
-<h1 id="数据库语言"><a href="#数据库语言" class="headerlink" title="数据库语言"></a>数据库语言</h1><p>SQL  DML(数据库操作语言)      DDL(数据库定义语言)      DQL(数据库查询语言)      DCL(数据库控制语言)<br>(1) SQL   DML</p>
-<pre><code>用于更新、删除和插入记录的语法。</code></pre><p>UPDATE - 更新数据库表中的数据<br>DELETE - 从数据库表中删除数据<br>INSERT INTO - 向数据库表中插入数据<br>(2) SQL    DDL</p>
-<p>　　用于创建或删除表格，也可以定义索引（键），规定表之间的关系，以及添加表间的约束。</p>
-<p>CREATE DATABASE - 创建新数据库<br>ALTER DATABASE - 修改数据库<br>CREATE TABLE - 创建新表<br>ALTER TABLE - 变更（改变）数据库表<br>DROP TABLE - 删除表<br>CREATE INDEX - 创建索引（搜索键）<br>DROP INDEX - 删除索引<br>(3) SQL     DQL</p>
-<p>　　用于执行查询的语法，基本结构是由SELECT子句，FROM子句，WHERE子句组成的查询块。</p>
-<p>　　SELECT &lt;字段名&gt;</p>
-<p>　　FROM    &lt;表名或视图&gt;</p>
-<p>　　WHERE  &lt;条件&gt;</p>
-<p>(4)  SQL     DCL</p>
-<p>　　用于创建与用户访问相关的对象，以及控制用户的权限</p>
-<p>ALTER PASSWORD<br>GRANT  &lt;授权&gt;<br>REVOKE<br>CREATE SYNONYM</p>
+<p>(1) 什么是SQL？<br>1.SQL 指结构化查询语言<br>2.SQL 使我们有能力访问数据库<br>3.SQL 是一种 ANSI 的标准计算机语言<br>　　注意：ANSI，美国标准</p>
+<p>(2) SQL能做什么？<br>SQL 面向数据库执行查询<br>SQL 可从数据库取回数据<br>SQL 可在数据库中插入新的记录<br>SQL 可更新数据库中的数据<br>SQL 可从数据库删除记录<br>SQL 可创建新数据库<br>SQL 可在数据库中创建新表<br>SQL 可在数据库中创建存储过程<br>SQL 可在数据库中创建视图<br>SQL 可以设置表、存储过程和视图的权限</p>
+<p>(3) 数据库系统<br>什么是数据库?举个例子来说明这个问题：每个人都有很多亲戚和朋友，为了保持与他们的联系，我们常常用一个笔记本将他们的姓名、地址、电话等信息都记录下来，这样要査谁的电话或地址就很方便了。这个“通讯录”就是一个最简单的“数据库”，每个人的姓名、地址、电话等信息就是这个数据库中的“数据”。我们可以在笔记本这个“数据库”中添加新朋友的个人信息，也可以由于某个朋友的电话变动而修改他的电话号码这个“数据”。不过说到底，我们使用笔记本这个“数据库”还是为了能随时査到某位亲戚或朋友的地址、邮编或电话号码这些“数据”。<br>数据库(Database)是按照数据结构来组织、储存和管理数据的建立在计算机存储设备上的仓库。<br>MS Access、DB2、Informix、MS SQL Server、Oracle、Sybase 以及其他数据库系统（PS:好多我也没用过。）<br>他们都有一些相似的地方，比如(SELECT、UPDATE、DELETE、INSERT、WHERE 等等)，当然大多数据库都有自己的扩张。可以了解了解。</p>
+<p>(4) 数据库表<br>一个数据库通常包含一个或多个表。每个表由一个名字标识(表名)，表是相关的数据项的集合，它由列和行组成。</p>
+<ol>
+<li>字段。<br>每个表都可以分解为更小的项。这些项被称为“字段”。字段是表里的一列，用于保持每条记录的特定信息。</li>
+<li>记录或一行数据。<br>记录，也被称为一行数据，是表里的各行。在关系型数据库的表里，一行数据是指一条完整的记录。</li>
+<li>列。<br>列是表里的垂直的一项，包含表里特定字段的全部信息。</li>
+<li>主键。<br>主键用于区分表里的每一条数据，它通常是在表创建过程中初始化的。主键的特性确保了每一条记录都是唯一的。</li>
+<li>NULL值。<br>NULL 是表示“没有值”的专用术语。如果表中某个字段的值是NULL，其表现形式就是字段为空，其值就是没有值。NULL并不等于0或空格。值为NULL的字段在表创建过程中会保持为空。</li>
+<li>索引<br>为了提高访问数据库的效率，可以对数据库使用索引。当数据库较大时，为了查找指定的记录，则使用索引和不使用索引的效率有很大差别。索引实际上是一种特殊类型的表，其中含有关键字段的值(由用户定义)和指向实际记录位置的指针，这些值和指针按照特定的顺序(也由用户定义)存储，从而可以以较快的速度查找到所需要的数据记录。</li>
+</ol>
+<h1 id="数据库语言"><a href="#数据库语言" class="headerlink" title="数据库语言"></a>数据库语言</h1><p>SQL<br>DML(数据库操作语言)<br>DDL(数据库定义语言)<br>DQL(数据库查询语言)<br>DCL(数据库控制语言)</p>
+<ol>
+<li><p>SQL   DML<br>用于更新、删除和插入记录的语法。<br>UPDATE - 更新数据库表中的数据<br>DELETE - 从数据库表中删除数据<br>INSERT INTO - 向数据库表中插入数据</p>
+</li>
+<li><p>SQL   DDL<br>用于创建或删除表格，也可以定义索引（键），规定表之间的关系，以及添加表间的约束。<br>CREATE DATABASE - 创建新数据库<br>ALTER DATABASE - 修改数据库<br>CREATE TABLE - 创建新表<br>ALTER TABLE - 变更（改变）数据库表<br>DROP TABLE - 删除表<br>CREATE INDEX - 创建索引（搜索键）<br>DROP INDEX - 删除索引</p>
+</li>
+<li><p>SQL   DQL<br>用于执行查询的语法，基本结构是由SELECT子句，FROM子句，WHERE子句组成的查询块。<br>SELECT &lt;字段名&gt;<br>FROM    &lt;表名或视图&gt;<br>WHERE  &lt;条件&gt;</p>
+</li>
+<li><p>SQL   DCL<br>用于创建与用户访问相关的对象，以及控制用户的权限<br>ALTER PASSWORD<br>GRANT  &lt;授权&gt;<br>REVOKE<br>CREATE SYNONYM</p>
+</li>
+</ol>
 
       
     </div>

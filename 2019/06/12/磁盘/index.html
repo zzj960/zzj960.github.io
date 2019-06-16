@@ -114,7 +114,7 @@
 <meta property="og:image" content="http://zzj960.github.io/2019/06/12/磁盘/1-140F202542R36.jpg">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/12/磁盘/1-140F203220E27.jpg">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/12/磁盘/1-140F2031911211.jpg">
-<meta property="og:updated_time" content="2019-06-13T09:18:25.298Z">
+<meta property="og:updated_time" content="2019-06-15T14:18:31.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="磁盘">
 <meta name="twitter:description" content="磁盘的结构磁盘(Disk)是由表面涂有磁性物质的金属或塑料构成的圆形盘片，通过一个称为磁头的导体线圈从磁盘中存取数据。在读/写操作期间，磁头固定，磁盘在下面高速旋转。如下图所示，磁盘的盘面上的数据存储在一组同心圆中，称为磁道。每个磁道与磁头一样宽, 一个盘面有上千个磁道。磁道又划分为几百个扇区，每个扇区固定存储大小（通常为512B), 一个扇区称为一个盘块。相邻磁道及相邻扇区间通过一定的间隙分隔开">
@@ -2016,7 +2016,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff0dd1;
+  background: #ff8;
 }
 .feed-link,
 .chat {
@@ -3357,7 +3357,7 @@ body {
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-13 17:18:25" itemprop="dateModified" datetime="2019-06-13T17:18:25+08:00">2019-06-13</time>
+                <time title="修改时间：2019-06-15 22:18:31" itemprop="dateModified" datetime="2019-06-15T22:18:31+08:00">2019-06-15</time>
               
             
           </span>
@@ -3489,7 +3489,7 @@ body {
 </li>
 <li><p>延迟时间Tr：<strong><em>磁头定位到某一磁道的扇区（块号）所需要的时间</em></strong>，设磁盘的旋转速度为r，则：<br><img src="/2019/06/12/磁盘/1-140F2023640244.gif" alt=""></p>
 <blockquote>
-<p>对于硬盘，典型的旋转速度为5400r/m，相当于一周11.1ms，则Tr为5.55ms;对于软盘，其旋转速度在300<del>600r/m之间，则Tr为50</del>100ms。</p>
+<p>对于硬盘，典型的旋转速度为5400r/m，相当于一周11.1ms，则Tr为5.55ms;对于软盘，其旋转速度在<code>300~600r/m</code>之间，则Tr为<code>50~100ms</code>。</p>
 </blockquote>
 </li>
 <li><p>传输时间Tt：<strong><em>从磁盘读出或向磁盘写入数据所经历的时间</em></strong>，这个时间取决于每次所读/写的字节数b和磁盘的旋转速度：<br><img src="/2019/06/12/磁盘/1-140F2023I5X8.gif" alt=""></p>
