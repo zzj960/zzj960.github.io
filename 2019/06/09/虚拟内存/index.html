@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://zzj960.github.io/2019/06/09/虚拟内存/214343.png">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/09/虚拟内存/214409.png">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/09/虚拟内存/101330.png">
-<meta property="og:updated_time" content="2019-06-15T14:40:21.781Z">
+<meta property="og:updated_time" content="2019-06-16T03:58:08.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟内存">
 <meta name="twitter:description" content="虚拟内存的概念、特征以及虚拟内存的实现">
@@ -2010,7 +2010,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8;
+  background: #6f3cfb;
 }
 .feed-link,
 .chat {
@@ -3351,7 +3351,7 @@ body {
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-15 22:40:21" itemprop="dateModified" datetime="2019-06-15T22:40:21+08:00">2019-06-15</time>
+                <time title="修改时间：2019-06-16 11:58:08" itemprop="dateModified" datetime="2019-06-16T11:58:08+08:00">2019-06-16</time>
               
             
           </span>
@@ -3510,11 +3510,13 @@ body {
 <h2 id="页表机制"><a href="#页表机制" class="headerlink" title="页表机制"></a>页表机制</h2><p>请求分页系统的页表机制不同于基本分页系统，请求分页系统在一个作业运行之前不要求全部一次性调入内存，因此在作业的运行过程中，必然会出现要访问的页面不在内存的情况，如何发现和处理这种情况是请求分页系统必须解决的两个基本问题。为此，在请求页表项中增加了四个字段，如下图所示。<br><img src="/2019/06/09/虚拟内存/1-140F10202531Y.png" alt=""></p>
 <center>请求分页系统中的页表项</center>
 增加的四个字段说明如下：
-* 状态位P：用于指示该页是否已调入内存，供程序访问时参考。
-* 访问字段A：用于记录本页在一段时间内被访问的次数，或记录本页最近己有多长时间未被访问，供置换算法换出页面时参考。
-* 修改位M：标识该页在调入内存后是否被修改过。
-* 外存地址：用于指出该页在外存上的地址，通常是物理块号，供调入该页时参考。
 
+<ul>
+<li>状态位P：用于指示该页是否已调入内存，供程序访问时参考。</li>
+<li>访问字段A：用于记录本页在一段时间内被访问的次数，或记录本页最近己有多长时间未被访问，供置换算法换出页面时参考。</li>
+<li>修改位M：标识该页在调入内存后是否被修改过。</li>
+<li>外存地址：用于指出该页在外存上的地址，通常是物理块号，供调入该页时参考。</li>
+</ul>
 <h2 id="缺页中断机构"><a href="#缺页中断机构" class="headerlink" title="缺页中断机构"></a>缺页中断机构</h2><p>在请求分页系统中，每当所要访问的页面不在内存时，便产生一个缺页中断，请求操作系统将所缺的页调入内存。此时应将缺页的进程阻塞（调页完成唤醒)，如果内存中有空闲块，则分配一个块，将要调入的页装入该块，并修改页表中相应页表项，若此时内存中没有空闲块，则要淘汰某页（若被淘汰页在内存期间被修改过，则要将其写回外存)。</p>
 <p>缺页中断作为中断同样要经历，诸如保护CPU环境、分析中断原因、转入缺页中断处理程序、恢复CPU环境等几个步骤。但与一般的中断相比，它有以下两个明显的区别：</p>
 <ul>
