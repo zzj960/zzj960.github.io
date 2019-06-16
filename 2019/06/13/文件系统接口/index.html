@@ -112,7 +112,7 @@
 <meta property="og:image" content="http://zzj960.github.io/2019/06/13/文件系统接口/1-140F11634005Q.jpg">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/13/文件系统接口/1-140F11H004348.jpg">
 <meta property="og:image" content="http://zzj960.github.io/2019/06/13/文件系统接口/1-140F1155P2G9.jpg">
-<meta property="og:updated_time" content="2019-06-13T09:19:43.543Z">
+<meta property="og:updated_time" content="2019-06-16T10:13:01.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件系统接口">
 <meta name="twitter:description" content="文件管理主要内容：  文件系统基础：包括文件概念、文件的逻辑结构（顺序文件，索引文件，索引顺序文件）、目录结构（文件控制块和索引结点，单级目录结构和两级目录结构，树形目录结构，图形目录结构）、文件共享和文件保护（访问类型，访问控制）。 文件系统实现：包括文件系统层次结构、目录实现、文件实现。 磁盘组织与管理：包括磁盘的结构、磁盘调度算法、磁盘的管理。">
@@ -2014,7 +2014,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6f3cfb;
+  background: #05d1ff;
 }
 .feed-link,
 .chat {
@@ -3338,12 +3338,24 @@ body {
                 
               
 
-              <time title="创建时间：2019-06-13 14:49:40 / 修改时间：17:19:43" itemprop="dateCreated datePublished" datetime="2019-06-13T14:49:40+08:00">2019-06-13</time>
+              <time title="创建时间：2019-06-13 14:49:40" itemprop="dateCreated datePublished" datetime="2019-06-13T14:49:40+08:00">2019-06-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-16 18:13:01" itemprop="dateModified" datetime="2019-06-16T18:13:01+08:00">2019-06-16</time>
               
             
           </span>
@@ -3547,10 +3559,7 @@ body {
 </ul>
 <h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>在理解一个文件系统的需求前，我们首先来考虑<strong>在目录这个层次上所需要执行的操作</strong>，这有助于后面文件系统的整体理解。</p>
 <ul>
-<li><ul>
 <li>搜索：当用户使用一个文件时，需要搜索目录，以找到该文件的对应目录项。</li>
-</ul>
-</li>
 <li>创建文件：当创建一个新文件时，需要在目录中增加一个目录项。</li>
 <li>删除文件：当删除一个文件时，需要在目录中删除相应的目录项。</li>
 <li>显示目录：用户可以请求显示目录的内容，如显示该用户目录中的所有文件及属性。</li>
